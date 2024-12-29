@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 
 use Inertia\Inertia;
@@ -21,8 +22,13 @@ Route::get('/', function () {
 // short way
 Route::inertia('/about', 'About');
 
+Route::inertia('/form', 'Form');
 
 
+Route::post('/submit-form', function (Request $request) {  
+    dd($request->all());
+    // must return a compoennt or a ui
+});
 
 Route::get('/red-home', function () {  
 
