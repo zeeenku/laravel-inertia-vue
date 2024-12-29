@@ -1,6 +1,10 @@
 <template>
     <div class="welcome-container">
         <h1 class="title">{{ title }}</h1>
+        <Link href="/about">About</Link>
+
+        <!--   !! also possible <Link href="/logout" method="post" as="button">Logout</Link> -->
+
         <p class="subtitle">
             Enjoy the power of modern full-stack development with Laravel, Vue 3, and Inertia.js.
         </p>
@@ -18,6 +22,8 @@
     </div>
 </template>
 <script setup>
+import { Link } from '@inertiajs/inertia-vue3'
+
 import {ref, computed} from "vue";
 const currentYear = ref(new Date().getFullYear());
 const props = defineProps(["title"]);

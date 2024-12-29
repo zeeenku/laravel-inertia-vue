@@ -4,8 +4,8 @@
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{$page["props"]["title"]}}</title>
-    <meta name="description" content="{{ $description }}">
+    <title>{{$page["props"]["title"] ?? ""}}</title>
+    <meta name="description" content="{{ $description ?? "" }}">
 
     @vite(['resources/js/app.js', 'resources/css/app.css'])
     @inertiaHead

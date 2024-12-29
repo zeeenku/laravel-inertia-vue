@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 
 use Inertia\Inertia;
 
+
+//todo: External redirects
+
 Route::get('/', function () {  
 
     return Inertia::render('Welcome', [
@@ -13,6 +16,10 @@ Route::get('/', function () {
     ])->withViewData(['description' => "description hhh"]);
     ;
 })->name("home");
+
+
+// short way
+Route::inertia('/about', 'About');
 
 
 

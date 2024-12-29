@@ -11,6 +11,9 @@ importers:
       '@inertiajs/inertia-vue3':
         specifier: ^0.6.0
         version: 0.6.0(@inertiajs/inertia@0.11.1)(vue@3.5.13)
+      '@inertiajs/vue3':
+        specifier: ^2.0.0
+        version: 2.0.0(vue@3.5.13)
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
         version: 5.2.1(vite@5.4.11)(vue@3.5.13)
@@ -185,6 +188,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@inertiajs/core@2.0.0':
+    resolution: {integrity: sha512-2kvlk731NjwfXUku/ZoXsZNcOzx985icHtTC1dgN+8sAZtJfEg9QBrQ7sBjeLYiWtKgobJdwwpeDaexEneAtLQ==}
+
   '@inertiajs/inertia-vue3@0.6.0':
     resolution: {integrity: sha512-qhPBtd/G0VS7vVVbYw1rrqKB6JqRusxqt+5ec2GLmK6t7fTlBBnZ3KsakmGZLSM1m1OGkNcfn4ifmCk3zfA8RQ==}
     peerDependencies:
@@ -193,6 +199,11 @@ packages:
 
   '@inertiajs/inertia@0.11.1':
     resolution: {integrity: sha512-btmV53c54oW4Z9XF0YyTdIUnM7ue0ONy3/KJOz6J1C5CYIwimiKfDMpz8ZbGJuxS+SPdOlNsqj2ZhlHslpJRZg==}
+
+  '@inertiajs/vue3@2.0.0':
+    resolution: {integrity: sha512-U38EM8jqlfX2WmVK/vJWZr+jD71qvnmNPnUuZ+4mS2QNFdNmUeg2M/HbLmvR4WLWsxIl+7GYQySy4sW3tu/uTA==}
+    peerDependencies:
+      vue: ^3.0.0
 
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
@@ -634,6 +645,14 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
+  '@inertiajs/core@2.0.0':
+    dependencies:
+      axios: 1.7.9
+      deepmerge: 4.3.1
+      qs: 6.13.1
+    transitivePeerDependencies:
+      - debug
+
   '@inertiajs/inertia-vue3@0.6.0(@inertiajs/inertia@0.11.1)(vue@3.5.13)':
     dependencies:
       '@inertiajs/inertia': 0.11.1
@@ -646,6 +665,15 @@ snapshots:
       axios: 0.21.4
       deepmerge: 4.3.1
       qs: 6.13.1
+    transitivePeerDependencies:
+      - debug
+
+  '@inertiajs/vue3@2.0.0(vue@3.5.13)':
+    dependencies:
+      '@inertiajs/core': 2.0.0
+      lodash.clonedeep: 4.5.0
+      lodash.isequal: 4.5.0
+      vue: 3.5.13
     transitivePeerDependencies:
       - debug
 
